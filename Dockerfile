@@ -5,9 +5,7 @@ RUN apt-get update && apt-get install python-mysqldb mercurial python-twisted ap
 RUN mkdir /Development
 RUN curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 RUN svn co https://svn.apache.org/repos/asf/incubator/wave/trunk
-RUN cd trunk && ant
+RUN cd trunk && ant && ./run-server.sh
 EXPOSE 80:80
 EXPOSE 443:443
 EXPOSE 3000:3000
-RUN echo "Done. Run 'mrt create <app-name>' to create meteor app. cd into the folder created and run 'meteor' to run your webapp locally."
-
