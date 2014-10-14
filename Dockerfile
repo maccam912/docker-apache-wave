@@ -7,7 +7,7 @@ RUN curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 RUN cd /Development && git clone git://git.apache.org/incubator-wave.git wave
 RUN cd /Development/wave && ant get-third-party compile-gwt dist-server
 RUN cd /Development/wave && ant -f server-config.xml
-RUN cd /Development/wave && ./run-server.sh
+#RUN cd /Development/wave && ./run-server.sh
 EXPOSE 80:80
 EXPOSE 443:443
 EXPOSE 3000:3000
