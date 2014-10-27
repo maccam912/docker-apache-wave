@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install vim mercurial python-mysqldb mercurial pyt
 RUN mkdir /Development
 #RUN curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 RUN cd /Development && hg clone https://wave-protocol.googlecode.com/hg/ wave
-RUN cd /Development/wave && ant get-third-party compile-gwt dist-server
 RUN cd /Development/wave && ant -f server-config.xml
+RUN cd /Development/wave && ant get-third-party compile-gwt dist-server
 RUN cd /Development/wave && ant
 RUN cd /Development/wave && ./run-server.sh
 EXPOSE 80:80
