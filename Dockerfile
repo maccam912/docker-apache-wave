@@ -11,7 +11,7 @@ RUN cd /Development && hg clone https://wave-protocol.googlecode.com/hg/ wave
 RUN cd /Development/wave && ant -f server-config.xml
 RUN cd /Development/wave && ant compile-gwt dist-server
 #RUN cd /Development/wave && ant
-RUN cd /Development/wave && ./run-server.sh
+#RUN cd /Development/wave && ./run-server.sh
 EXPOSE 80:80
 EXPOSE 443:443
 EXPOSE 3000:3000
