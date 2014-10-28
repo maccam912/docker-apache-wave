@@ -10,9 +10,11 @@ RUN mkdir /Development
 RUN cd /Development && hg clone https://wave-protocol.googlecode.com/hg/ wave
 RUN cd /Development/wave && ant -f server-config.xml
 RUN cd /Development/wave && ant compile-gwt dist-server
+RUN sed -i 's/localhost/0.0.0.0/g' /Development/wave/server.config
 #RUN cd /Development/wave && ant
 #RUN cd /Development/wave && ./run-server.sh
-EXPOSE 80:80
+#EXPOSE 80:80
+EXPOSE 80:9898
 EXPOSE 443:443
 EXPOSE 3000:3000
 EXPOSE 9898:9898
