@@ -1,7 +1,7 @@
 FROM debian
 MAINTAINER Matt Koski <maccam912@gmail.com>
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get update && apt-get install openjdk-6* install vim mercurial python-mysqldb mercurial python-twisted apache2 libapache2-mod-python rabbitmq-server git python build-essential wget screen tmux curl eclipse default-jre subversion mongodb ant -y
+RUN apt-get install openjdk-6* install vim mercurial python-mysqldb mercurial python-twisted apache2 libapache2-mod-python rabbitmq-server git python build-essential wget screen tmux curl eclipse default-jre subversion mongodb ant -y
 RUN mkdir /Development
 #RUN curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 RUN cd /Development && wget http://www.igniterealtime.org/downloadServlet?filename=openfire/openfire_3.6.4_all.deb
