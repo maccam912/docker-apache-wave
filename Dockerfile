@@ -13,8 +13,7 @@ RUN cd /Development/wave && ant compile-gwt dist-server
 RUN sed -i 's/localhost/0.0.0.0/g' /Development/wave/server.config
 #RUN cd /Development/wave && ant
 #RUN cd /Development/wave && ./run-server.sh
-#EXPOSE 80:80
-EXPOSE 80:9898
+EXPOSE 80:80
 EXPOSE 443:443
 EXPOSE 3000:3000
 EXPOSE 9898:9898
