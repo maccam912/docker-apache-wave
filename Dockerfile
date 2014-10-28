@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM debian
 MAINTAINER Matt Koski <maccam912@gmail.com>
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get update && apt-get sun-java6-jdk sun-java6-fonts install vim mercurial python-mysqldb mercurial python-twisted apache2 libapache2-mod-python rabbitmq-server git python build-essential wget screen tmux curl eclipse default-jre subversion mongodb ant -y
